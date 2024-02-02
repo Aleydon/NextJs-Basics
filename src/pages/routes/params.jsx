@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 function Params() {
@@ -10,8 +11,13 @@ function Params() {
 	return (
 		<div>
 			<h2>
-				Id: {id} - Name: {name}
+				Id: {id}
+				<br />
+				Name: {name}
 			</h2>
+			<Link href="/routes">
+				<button type="button">Go to Default Route</button>
+			</Link>
 		</div>
 	);
 }
